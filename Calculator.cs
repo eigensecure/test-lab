@@ -13,12 +13,6 @@ namespace GitPracticeLab
         {
             return a * b;
         }
-
-         public double Sub(double a, double b)
-        {
-            return a - b;
-        }
-
         // Try adding new methods here (e.g., Subtract, Divide)
     }
 }
