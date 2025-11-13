@@ -9,7 +9,7 @@ namespace GitPracticeLab
             return a + b;
         }
 
-        public double Multiply(double a, double b)
+        public double Multi(double a, double b)
         {
             return a * b;
         }
