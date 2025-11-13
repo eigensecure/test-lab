@@ -1,4 +1,0 @@
-This is a sample data file for Git testing.
-Modify or delete lines to test commit, push, pull, and revert.
-Line 1: Initial content.
-Line 2: You can safely edit this file.
