@@ -11,3 +11,5 @@ SET @password = 'admin123'
 SET @sql = 'SELECT * FROM Users WHERE Username = ''' + @username + ''' AND Password = ''' + @password + '''';
 PRINT @sql;  
 EXEC(@sql);
+
+create 2nd time
