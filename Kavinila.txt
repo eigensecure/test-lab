@@ -1,0 +1,13 @@
+ Create-1st time
+--normal user
+DECLARE @username NVARCHAR(100);
+DECLARE @password NVARCHAR(100);
+DECLARE @sql NVARCHAR(MAX);
+ 
+ 
+SET @username = 'admin''--'
+SET @password = 'admin123'
+ 
+SET @sql = 'SELECT * FROM Users WHERE Username = ''' + @username + ''' AND Password = ''' + @password + '''';
+PRINT @sql;  
+EXEC(@sql);
