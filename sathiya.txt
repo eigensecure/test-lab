@@ -1,0 +1,27 @@
+CREATE PARTITION FUNCTION PartitionByMonth (datetime2)
+AS RANGE left FOR VALUES('2025-10-31 23:59:59.9999999')
+GO
+
+
+CREATE PARTITION SCHEME SchemePartitionByMonth
+AS PARTITION PartitionByMonth
+ALL TO ([PRIMARY]);
+GO
+
+
+
+CREATE TABLE ChangeLogTable (
+    [Id] INT IDENTITY(1,1),
+    [PrimaryKey] NVARCHAR(100) NULL,
+    [TableName] NVARCHAR(50) NULL,
+    [UserId] NVARCHAR(100) NULL,
+    [Type] NVARCHAR(50) NULL,
+    [DateTime] DATETIME2(7) NOT NULL,
+    [OldRecord] NVARCHAR(255) NULL,
+    [NewRecord] NVARCHAR(255) NULL,
+    [AffectedColumns] NVARCHAR(255) NULL,
+    [DateCreated] DATETIME2(7) NULL,
+    [DateModified] DATETIME2(7) NULL,
+    CONSTRAINT PK_ChangeLogTable PRIMARY KEY CLUSTERED ([Id], [DateTime])  
+ON SchemePartitionByMonth ([DateTime]));
+GO
