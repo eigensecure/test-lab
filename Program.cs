@@ -18,6 +18,7 @@ namespace GitPracticeLab
             Console.WriteLine($"Sum: {calc.Add(num1, num2)}");
             Console.WriteLine($"Product: {calc.Multiply(num1, num2)}");
 
+            //dont try this
             Console.WriteLine("\nEdit this file or add new methods to test commits and reverts.");
         }
     }
