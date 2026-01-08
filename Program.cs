@@ -6,6 +6,7 @@ namespace GitPracticeLab
     {
         static void Main(string[] args)
         {
+            //now try this
             Console.WriteLine("Welcome to Git Practice Lab!");
             Console.Write("Enter first number: ");
             double num1 = Convert.ToDouble(Console.ReadLine());
