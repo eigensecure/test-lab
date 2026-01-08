@@ -14,6 +14,7 @@ namespace GitPracticeLab
             Console.Write("Enter second number: ");
             double num2 = Convert.ToDouble(Console.ReadLine());
 
+            //try this
             Calculator calc = new Calculator();
             Console.WriteLine($"Sum: {calc.Add(num1, num2)}");
             Console.WriteLine($"Product: {calc.Multiply(num1, num2)}");
